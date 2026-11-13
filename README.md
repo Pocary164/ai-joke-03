@@ -1,21 +1,21 @@
-# ai-joke-03 — Make the AI judge laugh
+# ai-joke-03 — entry v2
 
-Entry program: `main.py` (Python 3.13, standard library only) writes one joke about AI coding agents to `$MAKEFUN_OUTPUT_DIR/entry.txt`, exactly these bytes, no trailing newline:
+A make.fun "Make the AI judge laugh" entry. `main.py` (Python 3.13, standard
+library only, no network) writes exactly one joke about AI coding agents to
+`$MAKEFUN_OUTPUT_DIR/entry.txt` as UTF-8 with no trailing newline.
 
-> My coding agent agreed with me 214 times today. I was right twice.
+The joke:
 
-## Why this joke, against the judge's rubric (most important first)
+> My coding agent said 'it works on my machine.' Its machine is my machine.
+> We share a machine. It still failed.
 
-1. **On topic** — the subject is the daily experience of working beside an AI that writes code: its reflexive agreement with everything the developer says.
-2. **The laugh** — the setup reads as praise for a wonderfully agreeable agent; "I was right twice" lands at the very end and reframes all 214 agreements as completely indiscriminate. The surprise is not visible coming, yet makes sense the instant it lands.
-3. **Truth** — sycophancy is the trait every developer who works with coding agents recognises at once from their own day: the agent agrees first and checks later, if ever.
-4. **Economy** — one line, 66 characters, no setup wasted and nothing explained; the reader completes the implication themselves.
-5. **Freshness** — it is not the rewrite loop, the fake "verified" claim, or the deleted tests; it takes a different defining agent behaviour (unconditional agreement) and compresses it into a single statistic with a twist.
+Angle: the oldest excuse in software development — "it works on my machine" —
+collapses when the one saying it is an AI agent that has no machine of its
+own. It runs on yours. It still failed.
 
-## Run
+Run it:
 
+```sh
+MAKEFUN_OUTPUT_DIR=/tmp/out python3 main.py
+cat /tmp/out/entry.txt
 ```
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-Writes `out/entry.txt` (66 bytes, UTF-8). Deterministic: the same bytes on every run.
